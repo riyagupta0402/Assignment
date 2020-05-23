@@ -1,13 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<TITLE>MODULE2-ASSIGNMENT</TITLE>
-<link rel="stylesheet" type="text/css" href="https://riyagupta0402.github.io/Assignment/module-2-assignment/Style.css">
+ <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Comptible" content="IE=edge">
+  <meta  name="viewport" content="width=device-width , initial-scale=1">
+  <title>OUR MENU</title>
+  <link rel="stylesheet" href="css\bootstrap.css">
+  <link rel="stylesheet"  href="css\Style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet" type='text/css'> 
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> 
  </head>
 
+ <!--HEAD TAGS ENDS AND BODY TAGS BEGINS-->
+ <body>
+ 	<header>
+ 	   <nav id="header-nav" class="navbar navbar-default">
+ 		   <div class="container-fluid">
+          <div class="nvbar-header">
+ 		   	   <div class="navbar-brand">
+ 		   	   	 <a href="index.html">
+ 		   	   	 	<h1>
+ 		   	   	 	FOOD PLACES
+ 		   	   	    </h1>
+ 		   	   	 </a>
+ 		   	   </div> <!-- navbar-brand -->
+          </div>
+            <button type="button" class="navbar-toggle collapsed visible-xs" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false" >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
 
+          <div id="collapsable-nav" class="collapse navbar-collapse ">
+           <ul id="nav-list" class="nav navbar-nav navbar-right visible-xs">
+            <li>
+              <a  href="#Domino">
+                 DOMINO'S<br></a>
+            </li>
+            <li>
+              <a  href="#pizzahut">
+                PIZZA HUT<br></a>
+            </li>
+            <li>
+              <a  href="#mcd">
+               McDONALD'S</a>
+            </li>
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse --> 
+ 			  </div><!--container -->
+ 		 </nav>
+ 	</header>
 
-
-
+    <div id="main-content" class="container-fluid">
+      <h2 class="text-center">OUR PLACES</h2>
+      <div id="Domino">
+        <h3>DOMINO'S</h3>
+        <p>Domino's Pizza, Inc.,branded as Domino's, is an American multinational pizza restaurant chain founded in 1960. The corporation is headquartered at the Domino's Farms Office Park in Ann Arbor, Michigan,and incorporated in Delaware. In February 2018, the chain had sold more products out of all pizza sellers worldwide.</p>
+        <p>Domino's is the recognized world leader in pizza delivery operating a network of company-owned and franchise-owned stores in the United States and international markets. Domino's is a company of exceptional people on a mission to be the best pizza delivery company in the world.</p>
+        <br>
+        <p>The Domino's menu varies by region. The current Domino's menu in the United States features a variety of Italian-American main and side dishes. Pizza is the primary focus, with traditional, specialty, and custom pizzas available in a variety of crust styles and toppings.</p> 
+        <img class="logo" src="pic\untitled.png">
+        <a href="#header-nav">BACK TO TOP</a>
+      </div>
+      <div id="pizzahut">
+        <h3>PIZZA HUT</h3>
+         <p>Pizza Hut is an American restaurant chain and international franchise which was founded in 1958 in Wichita, Kansas by Dan and Frank Carney. The company is known for its Italian American cuisine menu, including pizza and pasta, as well as side dishes and desserts. Pizza Hut has 18,703 restaurants worldwide as of December 31, 2019.</p>
+        <p>In an incredible PR stunt, Pizza Hut delivery men hiked six hours to bring a pie to the highest point in Africa — the summit of Mt. Kilimanjaro in Tanzania, reported CNN.
+        They set a record for the highest-altitude pizza delivery on earth.</p>
+        <br>
+        <p> Pizza Hut is one of the largest pizza chains on Earth.The chain started in Kansas with just $600. It now has over 16,000 individual stores worldwide including in Tanzania, Russia, and Canada. </p> 
+        <img class="logo" src="pic\ph.jpg">
+        <a href="#header-nav">BACK TO TOP</a>
+      </div>
+      <div id="mcd">
+        <h3>McDONALD'S</h3>
+         <p>McDonald’s, in full McDonald’s Corporation, American fast-food chain that is one of the largest in the world, known for its hamburgers. Its headquarters are in Oak Brook, Illinois.</p>
+        <p>The first McDonald’s restaurant was started in 1948 by brothers Maurice (“Mac”) and Richard McDonald in San Bernardino, California. They bought appliances for their small hamburger restaurant from salesman Ray Kroc, who was intrigued by their need for eight malt and shake mixers. When Kroc visited the brothers in 1954 to see how a small shop could sell so many milk shakes, he discovered a simple, efficient format that permitted the brothers to produce huge quantities of food at low prices.</p>
+        <br>
+        <p>The public face of McDonald’s was created in 1963 with the introduction of a clown named Ronald McDonald, while the double-arch “m” symbol became McDonald’s most enduring logo in 1962, lasting far longer than the tall yellow arches that had once dominated the earlier restaurant rooftops.</p> 
+        <img class="logo" src="pic/mcd.jpg">
+        <a href="#header-nav">BACK TO TOP</a>
+      </div>
+    </div>
+    <!-- jquery (bootstrap JS plugins depend on it) -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
  </html>
