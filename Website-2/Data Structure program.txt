@@ -1,0 +1,240 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int array[100], n, i, j , swap;
+    printf("Enter  number of elements : ");
+    scanf("%d", &n);
+    printf("Enter %d elements:", n);
+    for(i=0; i<n; i++)
+        scanf("%d", &array[i]);
+    printf("\nSorting array using bubble sort technique...\n");
+    for(i=0; i<(n-1); i++)
+    {
+        for(j=0; j<(n-i-1); j++)
+        {
+            if(array[j]>array[j+1])
+            {
+                swap = array[j];
+                array[j] = array[j+1];
+                array[j+1] = swap;
+            }
+        }
+    }
+    printf("All Array elements sorted successfully!\n");
+    printf("Array elements in ascending order:\n\n");
+    for(int q =0; q<n; q++)
+        printf("%d ", array[q]);
+    getch();
+    return 0;
+}
+
+
+*****************************************************************************
+
+
+
+
+#include <stdio.h>​
+#include <conio.h>
+
+void main () 
+{​
+  int i , j ;
+  int n[10] , i , j ;
+  for ( i = 0; i < 10; i++ ) 
+    n[ i ] = i + 100; 
+  for (j = 0; j < 10; j++ )
+    printf("Element[%d] = %d\n", j, n[j] );​
+}
+
+
+
+****************************************************************************
+
+MATRIX MULTIPLICATION
+
+#include <stdio.h>
+#include <conio.h>
+ 
+int main()
+{
+    int m, n, p, q, c, d, k, sum = 0;
+    int first[10][10], second[10][10], multiply[10][10];
+ 
+    printf("\nEnter the number of rows and columns of first matrix:\n");
+    scanf("%d%d", &m, &n);
+ 
+    printf("\nEnter the number of rows and columns of second matrix:\n");
+    scanf("%d%d", &p, &q);
+ 
+    if ( n != p )
+    {
+        printf("\nMatrices with entered orders can't be multiplied with each other.\n");
+        printf("\nThe column of first matrix should be equal to row of second.\n");
+    }
+    else
+    {
+
+        printf("\nEnter the elements of first matrix:\n");
+        for (  c = 0 ; c < m ; c++ )
+            for ( d = 0 ; d < n ; d++ )
+                scanf("%d", &first[c][d]);
+
+        printf("\nEnter the elements of second matrix:\n");
+        for ( c = 0 ; c < p ; c++ )
+            for ( d = 0 ; d < q ; d++ )
+                scanf("%d", &second[c][d]);
+
+        for ( c = 0 ; c < m ; c++ )
+            for ( d = 0 ; d < q ; d++ )
+            {
+                for ( k = 0 ; k < p ; k++ )
+                    sum = sum + first[c][k]*second[k][d];
+                multiply[c][d] = sum;
+                sum = 0;
+            }
+
+        printf("\nThe product of entered matrices is:\n");
+        for ( c = 0 ; c < m ; c++ )
+        {
+            for ( d = 0 ; d < q ; d++ )
+                printf("%d\t", multiply[c][d]);
+ 
+            printf("\n");
+        }
+    }
+ 
+    return 0;
+}
+
+
+***********************************************************************************
+MATRIX ADDITION
+
+
+#include <stdio.h>
+#include <conio.h>
+ 
+int main()
+{
+   int m, n, c, d, first[10][10], second[10][10], sum[10][10];
+ 
+   printf("Enter the number of rows and columns of matrix\n");
+   scanf("%d%d", &m, &n);
+   printf("Enter the elements of first matrix\n");
+ 
+   for (c = 0; c < m; c++)
+      for (d = 0; d < n; d++)
+         scanf("%d", &first[c][d]);
+ 
+   printf("Enter the elements of second matrix\n");
+ 
+   for (c = 0; c < m; c++)
+      for (d = 0 ; d < n; d++)
+         scanf("%d", &second[c][d]);
+   
+   printf("Sum of entered matrices:-\n");
+   
+   for (c = 0; c < m; c++) {
+      for (d = 0 ; d < n; d++) {
+         sum[c][d] = first[c][d] + second[c][d];
+         printf("%d\t", sum[c][d]);
+      }
+      printf("\n");
+   }
+ 
+   return 0;
+}
+
+*****************************************************************************
+WAP to print 20 elements in array
+WAP to search an element in array
+
+***********************************************************************************
+
+SINGLE LINKED LIST
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node 
+{
+    int num;                        //Data of the node
+    struct node *nextptr;           //Address of the next node
+}*stnode;
+
+void createNodeList(int n); // function to create the list
+void displayList();         // function to display the list
+
+int main()
+{
+    int n;
+    printf("\n\n Linked List : To create and display Singly Linked List :\n");
+    printf("-------------------------------------------------------------\n");	
+    printf(" Input the number of nodes : ");
+    scanf("%d", &n);
+    createNodeList(n);
+    printf("\n Data entered in the list : \n");
+    displayList();
+    return 0;
+}
+void createNodeList(int n)
+{
+    struct node *fnNode, *tmp;
+    int num, i;
+    stnode = (struct node *)malloc(sizeof(struct node));
+
+    if(stnode == NULL) //check whether the fnnode is NULL and if so no memory allocation
+    {
+        printf(" Memory can not be allocated.");
+    }
+    else
+    {
+// reads data for the node through keyboard
+        printf(" Input data for node 1 : ");
+        scanf("%d", &num);
+        stnode->num = num;      
+        stnode->nextptr = NULL; // links the address field to NULL
+        tmp = stnode;
+// Creating n nodes and adding to linked list
+        for(i=2; i<=n; i++)
+        {
+            fnNode = (struct node *)malloc(sizeof(struct node));
+            if(fnNode == NULL)
+            {
+                printf(" Memory can not be allocated.");
+                break;
+            }
+            else
+            {
+                printf(" Input data for node %d : ", i);
+                scanf(" %d", &num);
+ 
+                fnNode->num = num;      // links the num field of fnNode with num
+                fnNode->nextptr = NULL; // links the address field of fnNode with NULL
+ 
+                tmp->nextptr = fnNode; // links previous node i.e. tmp to the fnNode
+                tmp = tmp->nextptr; 
+            }
+        }
+    }
+}
+void displayList()
+{
+    struct node *tmp;
+    if(stnode == NULL)
+    {
+        printf(" List is empty.");
+    }
+    else
+    {
+        tmp = stnode;
+        while(tmp != NULL)
+        {
+            printf(" Data = %d\n", tmp->num);       // prints the data of current node
+            tmp = tmp->nextptr;                     // advances the position of current node
+        }
+    }
+}
